@@ -1,0 +1,6 @@
+fastapi[all]==0.102.00
+psycopg2
+sqlalchemy==1.4.23
+passlib[bcrypt]
+python-jose[cryptography]
+alembic==1.6.5

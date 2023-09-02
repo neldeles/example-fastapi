@@ -1,0 +1,19 @@
+###
+# @name login
+POST {{url}}/login
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+
+admin@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+
+admin
+> {% client.global.set("access_token", response.body.access_token); %}
+
+###
+
+
+

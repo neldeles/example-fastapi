@@ -1,0 +1,15 @@
+###
+# @name create_user_200
+POST http://localhost:8000/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "admin@email.com",
+  "password": "admin"
+}
+
+###
+# @name get_user_200
+GET http://localhost:8000/users/1
+Accept: application/json

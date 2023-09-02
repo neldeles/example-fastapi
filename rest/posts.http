@@ -1,0 +1,68 @@
+###
+# @name create_post_200
+POST http://localhost:8000/posts
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "title": "New post 2 via sqlalchemy",
+  "content": "Some content"
+}
+
+###
+# @name get_posts_200
+GET http://localhost:8000/posts
+Authorization: Bearer {{access_token}}
+Accept: application/json
+
+###
+# @name get_post_200
+GET http://localhost:8000/posts/1
+Authorization: Bearer {{access_token}}
+Accept: application/json
+
+###
+# @name get_post_404
+GET http://localhost:8000/posts/9999999999
+Accept: application/json
+
+
+###
+# @name delete_post_success
+DELETE http://localhost:8000/posts/6
+Authorization: Bearer {{access_token}}
+Accept: application/json
+
+
+###
+# @name delete_post_404
+DELETE http://localhost:8000/posts/9999999
+Authorization: Bearer {{access_token}}
+Accept: application/json
+
+
+###
+# @name update_post_404
+PUT http://localhost:8000/posts/19
+Authorization: Bearer {{access_token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Update Title",
+  "content": "Updated content"
+}
+
+###
+# @name update_post_200
+PUT http://localhost:8000/posts/5
+Authorization: Bearer {{access_token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Moooooooo",
+  "content": "is what the cow says"
+}
+
+###
